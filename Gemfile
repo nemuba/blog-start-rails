@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
+#Kaminari
+gem 'kaminari'
+#Kaminari with bootstrap 4
+gem 'bootstrap4-kaminari-views'
 #Bootstrap 4
 gem 'bootstrap', '~>4.1.1'
 #jquery-Rails
