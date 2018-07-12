@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    models:
+      post: Postagem
+    attributes:
+      post:
+        id: "ID"
+        title: "Titulo"
+        author: "Autor"
+        content: "Conteúdo"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
