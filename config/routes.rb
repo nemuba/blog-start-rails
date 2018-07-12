@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   root 'blog#index'
+
   controller :blog do
     get 'about'
     get 'contact'
+    get 'blog/posts/:id' => 'blog#show_post', as: 'show'
+    post 'blog/posts/:id' => 'blog#create'
   end
 
   resources :posts
