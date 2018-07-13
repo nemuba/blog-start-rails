@@ -21,6 +21,10 @@
   <%= form.label :title %>
   <%= form.text_field :title, class: "form-control" %>
 </div>
+<div class="form-group">
+  <%= form.label :category %>
+  <%= form.select :category, options_for_select(['Ruby on Rails','Java','Ruby','Linux','OOP'], :selected => form.object.category),{prompt: true}, class: "form-control" %>
+</div>
 
 <div class="form-group">
   <%= form.label :content %>
