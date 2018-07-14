@@ -2,11 +2,20 @@ pt-BR:
   activerecord:
     models:
       post: Postagem
+      comment: Comentário
     attributes:
       post:
         id: "ID"
         title: "Titulo"
         author: "Autor"
         content: "Conteúdo"
+        commenter: "Autor"
+        body: "Conteúdo"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      comment:
+        id: "ID"
+        commenter: "Autor"
+        body: "Conteúdo"
         created_at: "Criado em"
         updated_at: "Atualizado em"
