@@ -1,11 +1,8 @@
 <% model_class = Post %>
-  <div class="col-md-8">
-    <div class="my-4">
-      <h1><%= t('.new', default: t('helpers.titles.new', model: model_class.model_name.human)) %></h1>
-    </div>
-
-    <%= render 'form', post: @post %>
-
-    <%= link_to t('.back', default: t('helpers.links.back')), posts_path, class: "btn btn-danger btn-sm" %>
-
+  <div class="my-4">
+    <h1><%= t('.new', default: t('helpers.titles.new', model: model_class.model_name.human)) %></h1>
   </div>
+
+  <%= render 'form', post: @post %>
+
+  <%= link_to t('.back', default: t('helpers.links.back')), posts_path, class: "btn btn-danger btn-sm" %>

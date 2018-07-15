@@ -1,42 +1,41 @@
 <% title "Blog - Posts" %>
   <% model_class = Post %>
-    <div class="col-md-8">
-      <h1 class="my-4">Postagem</h1>
-      <div class="card mb-4 mt-2">
-        <%# <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap"> %>
-          <div class="card-body">
-            <h2 class="card-title"><%= @post.title %></h2>
-            <h5 class="text-muted">Postado
-              <%= @post.created_at.strftime("%d/%m/%Y") %>
-              por
-              <%= @post.author %></h5>
-            <p class="card-text"><%= @post.content %></p>
-          </div>
-          <div class="card-footer">
 
-            <% if @post.comments.any? %>
-              <h4>Comentários</h4>
-              <% @post.comments.each do |comment| %>
-                <div class="card mt-4">
-                  <div class="card-header text-muted">
-                    <%= model_class.human_attribute_name(:commenter) %>
-                    <%= comment.commenter %>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text">
-                      <%= comment.body %>
-                    </p>
-                  </div>
-                  <div class="card-footer">
-                    <h6 class="text-muted">Postado em
-                      <%= comment.created_at.strftime("%d/%m/%Y") %>
-                    </h6>
-                  </div>
-                </div>
-              <% end %>
-            <% end %>
-          </div>
+    <h1 class="my-4">Postagem</h1>
+    <div class="card mb-4 mt-2">
+      <%# <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap"> %>
+        <div class="card-body">
+          <h2 class="card-title"><%= @post.title %></h2>
+          <h5 class="text-muted">Postado
+            <%= @post.created_at.strftime("%d/%m/%Y") %>
+            por
+            <%= @post.author %></h5>
+          <p class="card-text"><%= @post.content %></p>
         </div>
-        <h2>Adicionar comentário:</h2>
-        <%= render 'blog/form' %>
+        <div class="card-footer">
+
+          <% if @post.comments.any? %>
+            <h4>Comentários</h4>
+            <% @post.comments.each do |comment| %>
+              <div class="card mt-4">
+                <div class="card-header text-muted">
+                  <%= model_class.human_attribute_name(:commenter) %>
+                  <%= comment.commenter %>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    <%= comment.body %>
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <h6 class="text-muted">Postado em
+                    <%= comment.created_at.strftime("%d/%m/%Y") %>
+                  </h6>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
       </div>
+      <h2>Adicionar comentário:</h2>
+      <%= render 'blog/form' %>

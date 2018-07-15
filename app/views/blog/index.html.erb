@@ -1,32 +1,30 @@
 <% title "Blog - Home" %>
-  <div class="col-md-8">
-    <h1 class="my-4">Posts Blog</h1>
-    <% if !@search.blank? %>
-      <h6><%= @search %></h6>
-    <% end %>
-    <!-- Blog Post -->
-    <% @posts.each do |post| %>
-      <div class="card mb-4">
-        <%# <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap"> %>
-          <div class="card-header">
-            <h2><%= post.title %></h2>
-            <h6 class="text-muted">Categoria:
-              <%= post.category %>
-            </h6>
-          </div>
-          <div class="card-body">
-            <p class="card-text"><%= post.content %></p>
-            <%= link_to 'Leia mais', show_path(post), class: "btn btn-primary" %>
-          </div>
-          <div class="card-footer text-muted">
-            Posted on
-            <%= post.created_at.strftime("%d/%m/%y") %>
-            by
-            <%= post.author %>
-          </div>
+
+  <h1 class="my-4">Posts Blog</h1>
+  <% if !@search.blank? %>
+    <h6><%= @search %></h6>
+  <% end %>
+  <!-- Blog Post -->
+  <% @posts.each do |post| %>
+    <div class="card mb-4">
+      <%# <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap"> %>
+        <div class="card-header">
+          <h2><%= post.title %></h2>
+          <h6 class="text-muted">Categoria:
+            <%= post.category %>
+          </h6>
         </div>
-      <% end %>
+        <div class="card-body">
+          <p class="card-text"><%= post.content %></p>
+          <%= link_to 'Leia mais', show_path(post), class: "btn btn-primary" %>
+        </div>
+        <div class="card-footer text-muted">
+          Posted on
+          <%= post.created_at.strftime("%d/%m/%y") %>
+          by
+          <%= post.author %>
+        </div>
+      </div>
+    <% end %>
 
-      <%= render 'layouts/pagination' %>
-
-    </div>
+    <%= render 'layouts/pagination' %>

@@ -1,5 +1,5 @@
 <!-- Sidebar Widgets Column -->
-<div class="col-md-4">
+<div class="col-4">
 
   <!-- Search Widget -->
   <div class="card my-4">
@@ -12,55 +12,51 @@
           <%= submit_tag 'OK', class: "btn btn-secondary" %>
         </span>
       <% end %>
-      <%# <input type="text" class="form-control" placeholder="Pesquise por...">
-        <span class="input-group-btn">
-          <button class="btn btn-secondary" type="button">OK!</button>
-        </span> %>
+    </div>
+  </div>
+</div>
+
+<!-- Categories Widget -->
+<div class="card my-4">
+  <h5 class="card-header">Categorias</h5>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-6">
+        <ul class="list-unstyled mb-0">
+          <li>
+            <%= link_to 'Ruby on Rails', '#', class: "btn btn-outline-primary" %>
+          </li>
+          <li>
+            <%= link_to 'Ruby', '#', class: "btn btn-outline-primary" %>
+          </li>
+          <li>
+            <%= link_to 'Java', '#', class: "btn btn-outline-primary" %>
+          </li>
+        </ul>
+      </div>
+      <div class="col-6">
+        <ul class="list-unstyled mb-0">
+          <li>
+            <%= link_to 'Linux', '#', class: "btn btn-outline-primary" %>
+          </li>
+          <li>
+            <%= link_to 'OOP', '#', class: "btn btn-outline-primary" %>
+          </li>
+          <li>
+            <%= link_to 'WebDesign', '#', class: "btn btn-outline-primary" %>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Categories Widget -->
-  <div class="card my-4">
-    <h5 class="card-header">Categorias</h5>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-lg-6">
-          <ul class="list-unstyled mb-0">
-            <li>
-              <%= link_to 'Ruby on Rails', '#', class: "btn btn-outline-primary" %>
-            </li>
-            <li>
-              <%= link_to 'Ruby', '#', class: "btn btn-outline-primary" %>
-            </li>
-            <li>
-              <%= link_to 'Java', '#', class: "btn btn-outline-primary" %>
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-6">
-          <ul class="list-unstyled mb-0">
-            <li>
-              <%= link_to 'Linux', '#', class: "btn btn-outline-primary" %>
-            </li>
-            <li>
-              <%= link_to 'OOP', '#', class: "btn btn-outline-primary" %>
-            </li>
-            <li>
-              <%= link_to 'WebDesign', '#', class: "btn btn-outline-primary" %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<!-- Side Widget -->
+<div class="card my-4">
+  <h5 class="card-header">Side Widget</h5>
+  <div class="card-body">
+    You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
   </div>
-
-  <!-- Side Widget -->
-  <div class="card my-4">
-    <h5 class="card-header">Side Widget</h5>
-    <div class="card-body">
-      You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-    </div>
-  </div>
+</div>
 
 </div>
