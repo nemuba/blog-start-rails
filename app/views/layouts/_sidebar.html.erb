@@ -6,10 +6,16 @@
     <h5 class="card-header">Pesquisar</h5>
     <div class="card-body">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Pesquise por...">
+        <%= form_tag root_path, method: :get, class: "form-inline" do %>
+        <%= text_field_tag( :search, params[:search], placeholder: "Search", class: "form-control" ) %>
+        <span class="input-group-btn">
+          <%= submit_tag 'OK', class: "btn btn-secondary" %>
+        </span>
+      <% end %>
+      <%# <input type="text" class="form-control" placeholder="Pesquise por...">
         <span class="input-group-btn">
           <button class="btn btn-secondary" type="button">OK!</button>
-        </span>
+        </span> %>
       </div>
     </div>
   </div>
