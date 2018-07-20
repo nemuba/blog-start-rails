@@ -16,6 +16,15 @@
         <li class="nav-item <%= current_class?(contact_path) %>">
           <%= link_to 'Contato', contact_path, class: "nav-link" %>
         </li>
+        <% if user_signed_in? %>
+          <li class="nav-item <%= current_class?(destroy_user_session_path) %>">
+            <%= link_to 'Logout', destroy_user_session_path, class: "btn btn-outline-danger" %>
+          </li>
+        <% else %>
+          <li class="nav-item <%= current_class?(new_user_session_path) %>">
+            <%= link_to 'Login', new_user_session_path, class: "btn btn-outline-success" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

@@ -13,7 +13,10 @@
           <p class="card-text"><%= @post.content %></p>
         </div>
         <div class="card-footer">
-
+          <p class="my-2 text-muted float-right">
+            Comentários
+            <%= @post.comments.count %>
+          </p>
           <% if @post.comments.any? %>
             <h4>Comentários</h4>
             <% @post.comments.each do |comment| %>
@@ -35,7 +38,14 @@
               </div>
             <% end %>
           <% end %>
+          <% if !user_signed_in? %>
+            <p class="my-2 text-muted float-right">Para comentar a postagem faça
+              <%= link_to 'Login', new_user_session_path %>
+            </p>
+          <% end %>
         </div>
       </div>
-      <h2>Adicionar comentário:</h2>
-      <%= render 'blog/form' %>
+      <% if user_signed_in? %>
+        <h2>Adicionar comentário:</h2>
+        <%= render 'blog/form' %>
+      <% end %>
